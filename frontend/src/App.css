@@ -1,38 +1,322 @@
-.App {
+.heading {
+  color:#00dfc4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  color:#00dfc4;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 45px;
+  font-weight: 800;
+}
+
+.modal-body {
+  background-color: #1d2b3a;
+  color: #00dfc4;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+  color: #00dfc4;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.box {
+display: flex;
+min-height: 50vh;
+flex-direction: row;
+gap: 10px;
+background-color: #1d2b3a;
+border: 1px solid rgba(255,255,255,0.25);
+border-radius: 5px solid;
+}
+
+.inputbox {
+  position: relative;
+  width: 180px;
+  margin-right: 18px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transform: 0.5s;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  padding:20px;
+  pointer-events: none;
+  font-size: 15px;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span
+{
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background-color: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+
+
+.inputbox input:valid,
+.inputbox input:focus {
+  border: 1px solid #00dfc4;
+}
+
+.submit {
+  text-align: center;
+  font-size: 25px;
+  color: #1d2b3a;
+  background-color: powderblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+  border: 3px solid #00dfc4;
+  border-radius: 20px;
+  padding:5px;
+}
+
+
+
+/*Home.css*/
+
+.styled-table {
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.styled-table thead tr{
+  background-color: rgb(38, 41, 41);
+  color: yellowgreen;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom:  1px solid whitesmoke ;
+}
+
+.styled-table tbody tr:nth-of-type(even){
+  background-color: whitesmoke;
+}
+
+.styled-table tbody tr:last-of-type(even){
+  border-bottom: 2px solid green ;
+}
+
+.edit {
+  color: blue;
+}
+
+.btn {
+  border:none;
+  color:black;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 3px 3px;
+  padding: 5px 8px;
+}
+
+
+.btn-add {
+  height:50px;
+  width:25%;
+  background-color: green;
+  font-size: 20px;
+}
+
+.btn-edit {
+  background-color: #088cba;
+}
+
+.btn-delete {
+  background-color:red;
+}
+
+.btn-view {
+  background-color: yellowgreen;
+}
+
+
+.card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  align-content: center;
+  margin: 0 auto;
+  border: 1px gainsboro; 
+}
+
+.card-header {
+  height: 30%;
+  font-weight: 800;
+  background-color: blanchedalmond;
+  color:red;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-header p {
+  font-size: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  padding: 6px 16px;
+  font-size: 20px;
+  color: gold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+span {
+  margin-left: 15px;
+  margin-right: 15px;
+  color:whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.btn-goback {
+  color: aqua;
+  font-size: 25px;
+}
+
+/*Edit.css*/
+
+div {
+  display: block;
+}
+
+
+input[type = "text"],
+input[type = "number"],
+input[type = "date"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing:  border-box;
+}
+
+label {
+  font-size: large;
+  font-style: italic;
+  font-weight: 600;
+}
+
+input [type = "submit"]:hover {
+  background-color: #45e049;
+}
+
+.btn {
+  border:none;
+  color:whitesmoke;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 3px 3px;
+  padding: 5px 8px;
+}
+
+
+.btn-save {
+  font-size: 20px;
+  background-color:green;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-close {
+  font-size: 20px;
+  background-color:red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*View.css*/
+
+.card {
+  width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid;
+  align-content: center;
+  margin: 0 auto;
+  border: 1px gainsboro; 
 }
 
-.App-link {
-  color: #61dafb;
+.card-header {
+  height: 30%;
+  font-weight: 800;
+  background-color: blanchedalmond;
+  color:red;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-header p {
+  font-size: 30px;
 }
+
+.container {
+  padding: 6px 16px;
+  font-size: 20px;
+  color: gold;
+}
+
+span {
+  margin-left: 15px;
+  margin-right: 15px;
+  color:white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.btn-goback {
+  color: aqua;
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+
