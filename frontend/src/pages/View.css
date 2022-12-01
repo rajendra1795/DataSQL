@@ -1,0 +1,44 @@
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    align-content: center;
+    margin: 0 auto;
+    border: 1px gainsboro; 
+}
+
+.container {
+    background-color: black;
+    padding: 6px 16px;
+    font-size: 20px;
+    color: gold;
+}
+
+.card-header {
+    height: 30%;
+    font-weight: 800;
+    background-color: blanchedalmond;
+    color:red;
+    text-align: center;
+}
+
+.card-header p {
+    font-size: 30px;
+}
+
+span {
+    margin-left: 15px;
+    margin-right: 15px;
+    color:aqua;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+.btn-goback {
+    color: yellowgreen;
+    font-weight:800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}

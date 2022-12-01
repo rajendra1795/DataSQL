@@ -1,0 +1,56 @@
+div {
+    display: block;
+}
+
+
+input[type = "text"],
+input[type = "number"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing:  border-box;
+}
+
+label {
+    font-size: large;
+    font-style: italic;
+    font-weight: 600;
+}
+
+input [type = "submit"]:hover {
+    background-color: #45e049;
+}
+
+.btn {
+    border:none;
+    color:whitesmoke;
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 3px 3px;
+    padding: 5px 8px;
+}
+
+
+.btn-save {
+    font-size: 20px;
+    background-color:green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-close {
+    font-size: 20px;
+    background-color:red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
