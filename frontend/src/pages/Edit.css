@@ -2,7 +2,6 @@ div {
     display: block;
 }
 
-
 input[type = "text"],
 input[type = "number"],
 select {
@@ -21,34 +20,34 @@ label {
     font-weight: 600;
 }
 
-input [type = "submit"]:hover {
-    background-color: #45e049;
-}
-
 .btn {
     border:none;
     color:whitesmoke;
-    font-size: 10px;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     border-radius: 5px;
-    margin: 3px 3px;
+    margin: 5px;
     padding: 5px 8px;
+    margin-left:125px;
 }
 
 
 .btn-save {
-    font-size: 20px;
     background-color:green;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .btn-close {
-    font-size: 20px;
     background-color:red;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 25%;
+    margin-left:125px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
 
 

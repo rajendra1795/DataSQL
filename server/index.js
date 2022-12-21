@@ -6,10 +6,10 @@ const mysql = require("mysql2");
 
 
 const db = mysql.createPool({
-    host: "208.91.199.11",
-    user: "ztravilr_reuser",
-    password: "!yzN4a97",
-    database: "ztravilr_realestatecrm"
+    host: "127.0.0.1",
+    user: "root",
+    password: "root123",
+    database: "employee_data"
 });
 
 
@@ -37,10 +37,10 @@ app.get("/api/Commissionentry/", (req,res) => {
 // POST API (INSERT)
 
 app.post("/api/post", (req,res) => {
-    const { ReceiptNo , PassbookNo, CreatedDate, UpdatedDate, PaymentDate, Percentage, Total, TDS, Eligibility, Advance, Adjustment, Pending, Paid, MarketerName, ProjectId } = req.body;
+    const { ReceiptNo , CreatedDate, MarketerName } = req.body;
     const sqlInsert =
-         "INSERT INTO CommissionEntry ( ReceiptNo , PassbookNo, CreatedDate, UpdatedDate, PaymentDate, Percentage, Total, TDS, Eligibility, Advance, Adjustment, Pending, Paid, MarketerName, ProjectId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    db.query(sqlInsert, [ReceiptNo , PassbookNo, CreatedDate, UpdatedDate, PaymentDate, Percentage, Total, TDS, Eligibility, Advance, Adjustment, Pending, Paid, MarketerName, ProjectId], (error, result) => {
+         "INSERT INTO CommissionEntry ( ReceiptNo, CreatedDate, MarketerName) VALUES (?, ?, ?)";
+    db.query(sqlInsert, [ReceiptNo , CreatedDate, MarketerName ], (error, result) => {
        if (error) {
         console.log(error);
        } 
@@ -91,9 +91,9 @@ app.get("/api/Commissionentry", (req,res) => {
 
 app.put("/api/update/:CommissionEntryId", (req,res) => {
     const { CommissionEntryId } = req.params;
-    const { ReceiptNo, PassbookNo, CreatedDate, UpdatedDate, PaymentDate, Percentage, Total, TDS, Eligibility, Advance, Adjustment, Pending, Paid, MarketerName, ProjectId } = req.body;
-    const sqlUpdate = "UPDATE CommissionEntry SET ReceiptNo = ?, PassbookNo = ?, CreatedDate = ?, UpdatedDate = ?, PaymentDate = ?, Percentage = ?, Total = ?, TDS = ?, Eligibility = ?, Advance = ?, Adjustment = ?, Pending = ?, Paid = ?, MarketerName = ?, ProjectId = ? WHERE CommissionEntryId = ?";
-    db.query(sqlUpdate, [ ReceiptNo, PassbookNo, CreatedDate, UpdatedDate, PaymentDate, Percentage, Total, TDS, Eligibility, Advance, Adjustment, Pending, Paid, MarketerName, ProjectId, CommissionEntryId], (error, result) => {
+    const { ReceiptNo, CreatedDate, MarketerName } = req.body;
+    const sqlUpdate = "UPDATE CommissionEntry SET ReceiptNo = ?, CreatedDate = ?, MarketerName = ? WHERE CommissionEntryId = ?";
+    db.query(sqlUpdate, [ ReceiptNo, CreatedDate,  MarketerName, CommissionEntryId], (error, result) => {
         if (error) {
             console.log(error);
         }

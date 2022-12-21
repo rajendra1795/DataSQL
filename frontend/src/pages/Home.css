@@ -37,22 +37,28 @@
 .btn {
     border:none;
     color:black;
-    font-size: 25px;
-    text-align: center;
+    font-size: 5px;
     text-decoration: none;
-    display: inline-block;
     cursor: pointer;
     border-radius: 5px;
-    margin: 3px 3px;
     padding: 5px 8px;
 }
 
 
 .btn-add {
-    height:50px;
-    width:25%;
-    background-color: green;
-    font-size: 20px;
+    border:none;
+    color:whitesmoke;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 5px 8px;
+    margin-left:805px;
 }
 
 .btn-edit {
@@ -105,7 +111,3 @@ span {
     text-align: center;
 }
 
-.btn-goback {
-    color: aqua;
-    font-size: 25px;
-}
